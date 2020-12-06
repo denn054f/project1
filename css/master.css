@@ -1,0 +1,124 @@
+
+/* Generelle ændringer */
+:root {
+  --dark-grey-color: #DEE0E1;
+  --CTA-blue-color: #039BE5;
+  --light-blue-color: #E8F0FE;
+  --blue-color: #1A73E8;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background-color: #E8EAED
+}
+
+h1 {
+  color: #fff;
+  margin-left: 30px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CTA {
+  color: #fff;
+  background-color: var(--CTA-blue-color);
+  border-radius: 20px;
+  margin: 20px 0;
+  border: 1px solid black;
+  padding: 8px 13px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+}
+
+
+/* Top navigation */
+#topnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  min-height: 10%;
+  background-color: var(--CTA-blue-color);
+}
+
+/* Side navigation */
+#sidenav {
+  overflow-y: scroll;
+  position: fixed;
+  left: 0;
+  top: 10%;
+  bottom: 0;
+  border-right: 1px solid black;
+}
+
+#sidenav a {
+  display: block;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  min-width: 300px;
+  border-top: 1.5px solid var(--dark-grey-color);
+  border-bottom: 1.5px solid var(--dark-grey-color);
+}
+
+#sidenav .active {
+  background-color: var(--light-blue-color);
+  color: var(--blue-color);
+}
+
+#sidenav a:hover {
+  background-color: var(--light-blue-color);
+}
+
+.scroll {
+    background: var(--dark-grey-color);
+   overflow: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* Kursus indhold */
+.site_content {
+  position: absolute;
+  left: 350px;
+  top: 10%;
+}
+
+main {
+  margin: 30px 20px;
+  background-color: #fff;
+  padding: 50px;
+  -webkit-box-shadow: 5px 5px 5px -3px #000000;
+  box-shadow: 5px 5px 5px -3px #000000;
+}
+
+.iframe_holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prettyprint {
+  background-color: #F1F3F4 !important;
+}
