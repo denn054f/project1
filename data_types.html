@@ -11,7 +11,6 @@
 
 <body>
 
-
   <header>
     <nav id="topnav">
       <h1>JavaScript 2.0</h1>
@@ -21,13 +20,13 @@
   <nav class="scroll" id="sidenav">
     <ul>
       <li><a href="index.html">1. Introduktion</a></li>
-      <li><a href="data_types.html">2. Data Types</a></li>
+      <li><a href="data_types.html" class="active">2. Data Types</a></li>
       <li><a href="internal_JavaScript.html">3. Internal/External JavaScript</a></li>
       <li><a href="Variabler.html">4. Variabler</a></li>
       <li><a href="faa_fat_i_elementer.html">5. Få Fat I Elementer</a></li>
       <li><a href="funktioner.html">6. Funktioner</a></li>
       <li><a href="klik_på_knap.html">7. Klik På Knap</a></li>
-      <li><a href="style_elementer.html" class="active">8. Style Elementer</a></li>
+      <li><a href="style_elementer.html">8. Style Elementer</a></li>
       <li><a href="arrays.html">9. Arrays</a></li>
       <li><a href="if_statements.html">10. If Statements</a></li>
       <li><a href="for_loops.html">11. For Loops</a></li>
@@ -37,39 +36,29 @@
 
   <section class="site_content">
     <main>
-
-      <h2>Style elementer</h2>
-      <p>
-      Vi kender princippet fra CSS og det sammme kan altså lade sig gøre i Javascript. Ved brug af navne på almene CSS tags, kan elementer  styles som man ønsker de skal se ud.
-
+      <h2>Data Types</h2>
+      <p>Som ethvert andet programmeringssprog har JavaScript sine egne <b>data types</b>. En data type på et sprog definerer typen af ​​data, som en <b>variabel</b> kan indeholde.</br>Nedenfor er en liste over de syv, som JavaScript kan have:</p>
 
       <div class="prettyprint">
         <textarea>
-          <script>
+          1. Undefined - Når en variabel erklæres, men endnu ikke er tildelt en værdi, er den undefined.
 
-            let test = document.getElementById('test');
-            test.style.color = 'red';
-            test.style.fontSize = '50px'
+          2. Null - Speciel værdi, der repræsenterer "intet", "tom" eller "ukendt værdi".
 
-          </script>
-                          // eller
-          <script>
+          3. Boolean - Indeholder to værdier: true eller false.
 
-            let test = document.getElementById('test');
-            test.style.cssText = 'color: green; font-size: 30px;';
-            
-          </script>
+          4. String - Enkelt eller dobbelt anførselstegn, der omgiver et eller flere tegn.
+
+          5. Symbol - Symbols er unikke identifiers, der bla. kan bruges med objects.
+
+          6. Number - Består af heltal og decimaltal.
+
+          7. Object - I modsætning til andre typer, kan objects bruges til at gemme datasamlinger og mere komplekse enheder.
         </textarea>
         </div>
-      
 
-
-
-   </p>
     </main>
   </section>
-
   <script src="js/functions.js"></script>
 </body>
-
 </html>

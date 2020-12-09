@@ -11,61 +11,66 @@
 
 <body>
 
-
   <header>
     <nav id="topnav">
-      <h1>JavaScript 1.0.1</h1>
+      <h1>JavaScript 2.0</h1>
     </nav>
   </header>
 
   <nav class="scroll" id="sidenav">
     <ul>
       <li><a href="index.html">1. Introduktion</a></li>
-      <li><a href="hvad_er_JavaScript.html">2. Hvad er JavaScript?</a></li>
-      <li><a href="internal_JavaScript.html" class="active">3. Internal JavaScript</a></li>
-      <li><a href="faa_fat_i_elementer.html">4. Få Fat I Elementer</a></li>
-      <li><a href="klik_på_knap.html">5. Klik På Knap</a></li>
-      <li><a href="Manipuler_indhold.html">6. Manipuler indehold</a>
-      <li><a href="style_elementer.html">7. Style Elementer</a></li>
-      <li><a href="Variabler.html">8. Variabler</a></li>
+      <li><a href="data_types.html">2. Data Types</a></li>
+      <li><a href="internal_JavaScript.html" class="active">3. Internal/External JavaScript</a></li>
+      <li><a href="Variabler.html">4. Variabler</a></li>
+      <li><a href="faa_fat_i_elementer.html">5. Få Fat I Elementer</a></li>
+      <li><a href="funktioner.html">6. Funktioner</a></li>
+      <li><a href="klik_på_knap.html">7. Klik På Knap</a></li>
+      <li><a href="style_elementer.html">8. Style Elementer</a></li>
       <li><a href="arrays.html">9. Arrays</a></li>
       <li><a href="if_statements.html">10. If Statements</a></li>
       <li><a href="for_loops.html">11. For Loops</a></li>
       <li><a href="while_loops.html">12. While Loops</a></li>
-      <li><a href="funktioner.html">13. Funktioner</a></li>
-      <li><a href="external_javascript.html">14. External Javascript</a></li>
     </ul>
   </nav>
 
   <section class="site_content">
     <main>
-
       <h2>Internal JavaScript</h2>
+        <p>For at JavaScrip kan fungere, skal den på en eller anden måde inkorporeres på det rette sted på en bestemt webside, når siden indlæses. Intern JavaScript-kode er kode, der placeres hvor som helst på websiden mellem HTML-tags. Mange webudviklere vælger at placere deres kode foran tagget.</p>
 
-      <div class="iframe_holder">
-        <article class="">
-          <h4>Denne side indeholder:</h4>
-          <p>Forklaring, fordele og ulemper</p>
-        </article>
-      <iframe src="https://www.youtube.com/embed/6QOmyau0nSI?list=PLTY7p1J5YKQxKIbiGHvcRuzZKAFdLl7LT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+        <p>Hvis antallet af linjer i koden er relativt lille, indlæses en webside med intern JavaScript hurtigere end sider, der skal referere til ekstern kode. Dette skyldes, at da webbrowseren indlæser siden og møder henvisningen til den eksterne kode, skal den indgive en separat anmodning til webserveren om at hente koden.</p>
+      
+      <h2>External JavaScript</h2>
+        <p>Hvis identisk kode bruges på flere sider på et websted, er eksterne JavaScript-filer gavnlige. Du skal kun medtage en henvisning til den eksterne kode på de sider, der faktisk kræver den kode. Hvis Javascript-koden ændres, skal kun én fil redigeres. Ændringer er øjeblikkeligt tilgængelige for alle sider, der har brug for koden. Lagring af JavaScript i eksterne filer gør det også nemmere at vedligeholde websteder: Siderne er mindre rodede, og webudvikleren har færre linjer med kode at vade igennem, for at foretage de nødvendige redigeringer. Færre linjer med HTML-kode kan også hjælpe søgemaskinespiders med at indeksere dit websted mere grundigt og finde vigtige nøgleord. Endelig, hvis en besøgende flytter til en anden side, der indeholder de samme eksterne Javascript-referencer, indlæses den anden side hurtigere, fordi brugerens browser vil have cache eller gemt Javascript-filen lokalt.</p>
 
-      <h3>Hvad er det?</h3>
-      <p>
-        For at Javascript-koden skal fungere som sin magi, skal den på en eller anden måde inkorporeres på det rette sted på en bestemt webside, når siden indlæses. Intern Javascript-kode er kode, der placeres hvor som helst på websiden mellem HTML-tags. Mange webudviklere vælger at placere deres Javascript-kode foran tagget.</p>
+        <div class="prettyprint">
+          <textarea>
+          <html>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link href="style.css" rel="stylesheet" type="text/css">
+                <title>test</title>
+            </head>
+          <body>
+            <p id="a"></p>
 
+            <button type="button" onclick="testFunction()">Klik</button>
+            
+            <script> // internal javascript
+            function testFunction() {
+              document.getElementById("a").innerHTML = "Test123.";
+            }
+            </script>
 
-        <h3>Fordele</h3>
-        <p>Hvis antallet af linjer i Javascript er relativt lille, indlæses en webside med intern Javascript hurtigere end sider, der skal referere til ekstern kode. Dette skyldes, at da webbrowseren indlæser siden og møder henvisningen til den eksterne kode, skal den indgive en separat anmodning til webserveren om at hente koden.</p>
-        <h3>Ulemper</h3>
-        <p>Hvis identisk kode bruges på flere sider på et websted, er eksterne Javascript-filer gavnlige. Du skal kun medtage en henvisning til den eksterne kode på de sider, der faktisk kræver den kode. Hvis Javascript-koden ændres, skal kun én fil redigeres. ændringer er øjeblikkeligt tilgængelige for alle sider, der har brug for koden. Lagring af Javascript i eksterne filer gør det også nemmere at vedligeholde websteder: Siderne er mindre rodede, og webudvikleren har færre linjer med kode at vade igennem for at foretage de nødvendige redigeringer. Færre linjer med HTML-kode kan også hjælpe søgemaskinespiders med at indeksere dit websted mere grundigt og finde vigtige nøgleord.
-
-          Endelig, hvis en besøgende flytter til en anden side, der indeholder de samme eksterne Javascript-referencer, indlæses den anden side hurtigere, fordi brugerens browser vil have cache eller gemt Javascript-filen lokalt.</p>
+            <script src="script.js"></script> // external fil med javascript
+          </body>
+          </html>
+          </textarea>
+          </div>
     </main>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="js/functions.js"></script>
 </body>
-
 </html>

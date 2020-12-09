@@ -7,6 +7,14 @@
   --blue-color: #1A73E8;
 }
 
+p {
+  margin: 25px 0 25px 0;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
 button {
   outline: none;
 }
@@ -121,4 +129,18 @@ main {
 
 .prettyprint {
   background-color: #F1F3F4 !important;
+  padding: 2px;
+  border: 1px solid #888;
+}
+
+.prettyprint p {
+  margin: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 250px; 
+  box-sizing: border-box;
+  resize: none;
+  padding: 25px;
 }

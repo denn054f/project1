@@ -11,29 +11,26 @@
 
 <body>
 
-
   <header>
     <nav id="topnav">
-      <h1>JavaScript 1.0.1</h1>
+      <h1>JavaScript 2.0</h1>
     </nav>
   </header>
 
   <nav class="scroll" id="sidenav">
     <ul>
       <li><a href="index.html">1. Introduktion</a></li>
-      <li><a href="hvad_er_JavaScript.html">2. Hvad er JavaScript?</a></li>
-      <li><a href="internal_JavaScript.html">3. Internal JavaScript</a></li>
-      <li><a href="faa_fat_i_elementer.html" class="active">4. Få Fat I Elementer</a></li>
-      <li><a href="klik_på_knap.html">5. Klik På Knap</a></li>
-      <li><a href="Manipuler_indhold.html">6. Manipuler indehold</a>
-      <li><a href="style_elementer.html">7. Style Elementer</a></li>
-      <li><a href="Variabler.html">8. Variabler</a></li>
+      <li><a href="data_types.html">2. Data Types</a></li>
+      <li><a href="internal_JavaScript.html">3. Internal/External JavaScript</a></li>
+      <li><a href="Variabler.html">4. Variabler</a></li>
+      <li><a href="faa_fat_i_elementer.html" class="active">5. Få Fat I Elementer</a></li>
+      <li><a href="funktioner.html">6. Funktioner</a></li>
+      <li><a href="klik_på_knap.html">7. Klik På Knap</a></li>
+      <li><a href="style_elementer.html">8. Style Elementer</a></li>
       <li><a href="arrays.html">9. Arrays</a></li>
       <li><a href="if_statements.html">10. If Statements</a></li>
       <li><a href="for_loops.html">11. For Loops</a></li>
       <li><a href="while_loops.html">12. While Loops</a></li>
-      <li><a href="funktioner.html">13. Funktioner</a></li>
-      <li><a href="external_javascript.html">14. External Javascript</a></li>
     </ul>
   </nav>
 
@@ -41,27 +38,28 @@
     <main>
 
       <h2>Få fat i elementer</h2>
+      <p>Når du koder websider og apps, er en af ​​de mest almindelige ting du vil gøre, at manipulere dokumentstrukturen på en eller anden måde. For at gøre det skal du først finde elementerne. Det er der flere måder at gøre dette på:</p>
 
-      <div class="iframe_holder">
-        <article class="">
-          <h4>Denne side indeholder:</h4>
-          <p>Valg af dom-elementer</p>
-        </article>
-      <iframe src="https://www.youtube.com/embed/6QOmyau0nSI?list=PLTY7p1J5YKQxKIbiGHvcRuzZKAFdLl7LT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+      <p><b>getElementsByClassName</b> - en hurtig måde at vælge DOM-elementer på efter klassens navn i moderne browsere. Virker ikke i IE 8 og derunder.<br><br>
+      <b>getElementsByTagName</b> - en hurtig og tværsikker måde til at vælge DOM-elementer efter tagnavn, f.eks. "div", "a", "span" osv.<br><br>
+      <b>getElementById</b> - en hurtig og tværsikker måde til valg af DOM-elementer. Kan bruges ved at ramme ID til et element.</p>
 
-      <h3>Hvordan?</h3>
-      <p>
-        querySelectorAll - en CSS-vælgermetode som den, der leveres af jQuery.
-        querySelectorAll () returnerer en liste over DOM-elementer, der matcher en given CSS-vælger. Hvis du nogensinde har brugt jQuery til at vælge et element, ved du, hvordan du bruger denne metode.
-        <br><br>getElementsByClassName - en hurtig måde at vælge DOM-elementer på efter klassens navn i moderne browsere. Virker ikke i IE 8 og derunder.<br><br>
-         getElementsByTagName - en hurtig og tværsikker måde til at vælge DOM-elementer efter tagnavn, f.eks. "div", "a", "span" osv.<br><br>
-         getElementById - en hurtig og tværsikker måde til valg af DOM-elementer. Kan bruges ved at ramme ID til et element.</p>
+      <div class="prettyprint">
+        <textarea>
+          <script>
+
+            let a = document.getElementsByTagName("p"); // Dette eksempel tager fat i alle <p> elementerne.
+
+            let b = document.getElementById ("content");
+            let a = b.getElementsByTagName ("p");
+
+            // Dette eksempel tager fat i ID'erne "content", og <p> elementerne inde i "content":
+
+          </script>
+        </textarea>
+        </div>
     </main>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="js/functions.js"></script>
 </body>
-
 </html>

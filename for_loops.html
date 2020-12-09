@@ -11,50 +11,55 @@
 
 <body>
 
-
   <header>
     <nav id="topnav">
-      <h1>JavaScript 1.0.1</h1>
+      <h1>JavaScript 2.0</h1>
     </nav>
   </header>
 
   <nav class="scroll" id="sidenav">
     <ul>
       <li><a href="index.html">1. Introduktion</a></li>
-      <li><a href="hvad_er_JavaScript.html">2. Hvad er JavaScript?</a></li>
-      <li><a href="internal_JavaScript.html">3. Internal JavaScript</a></li>
-      <li><a href="faa_fat_i_elementer.html">4. Få Fat I Elementer</a></li>
-      <li><a href="klik_på_knap.html">5. Klik På Knap</a></li>
-      <li><a href="Manipuler_indhold.html">6. Manipuler indehold</a>
-      <li><a href="style_elementer.html">7. Style Elementer</a></li>
-      <li><a href="Variabler.html">8. Variabler</a></li>
+      <li><a href="data_types.html">2. Data Types</a></li>
+      <li><a href="internal_JavaScript.html">3. Internal/External JavaScript</a></li>
+      <li><a href="Variabler.html">4. Variabler</a></li>
+      <li><a href="faa_fat_i_elementer.html">5. Få Fat I Elementer</a></li>
+      <li><a href="funktioner.html">6. Funktioner</a></li>
+      <li><a href="klik_på_knap.html">7. Klik På Knap</a></li>
+      <li><a href="style_elementer.html">8. Style Elementer</a></li>
       <li><a href="arrays.html">9. Arrays</a></li>
       <li><a href="if_statements.html">10. If Statements</a></li>
       <li><a href="for_loops.html" class="active">11. For Loops</a></li>
       <li><a href="while_loops.html">12. While Loops</a></li>
-      <li><a href="funktioner.html">13. Funktioner</a></li>
-      <li><a href="external_javascript.html">14. External Javascript</a></li>
     </ul>
   </nav>
 
   <section class="site_content">
     <main>
-
       <h2>For loops</h2>
       <p><b>Loops</b> bruges til at udføre den samme kodeblok igen og igen, så længe en bestemt <b>condition</b> er opfyldt. Den grundlæggende idé bag et <b>loop</b> er at automatisere de gentagne opgaver i et program. Et <b>for loop</b> består af tre dele adskilt af semikolon;</p>
-      <p><b>for (statement 1; statement 2; statement 3) {
-        // kodeblok
-      }</b></p>
+      <p><b>for (statement 1; statement 2; statement 3) { kodeblok }</b></p>
       <p>Første statement udføres én gang før udførslen af kodeblokken.</p>
       <p>Andet statement definerer "condition" udførslen af kodeblokken</p>
       <p>Tredje statement udføres hver gang efter kodeblokken er udført</p>
-      </pre>
+      
+      <div class="prettyprint">
+        <textarea>
+            <script>
 
+              let n = 5;
+
+              for (let i = 1; i <= n; i++) {
+              document.write(i);     // skriver i værdien (12345)
+              }
+
+              // Da første til femte iteration er true, skrives de. Det sjette er derimod false og loopet stopper.
+
+            </script>
+        </textarea>
+        </div>
     </main>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="js/functions.js"></script>
 </body>
-
 </html>

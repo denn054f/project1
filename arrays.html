@@ -11,44 +11,49 @@
 
 <body>
 
-
   <header>
     <nav id="topnav">
-      <h1>JavaScript 1.0.1</h1>
+      <h1>JavaScript 2.0</h1>
     </nav>
   </header>
 
   <nav class="scroll" id="sidenav">
     <ul>
       <li><a href="index.html">1. Introduktion</a></li>
-      <li><a href="hvad_er_JavaScript.html">2. Hvad er JavaScript?</a></li>
-      <li><a href="internal_JavaScript.html">3. Internal JavaScript</a></li>
-      <li><a href="faa_fat_i_elementer.html">4. Få Fat I Elementer</a></li>
-      <li><a href="klik_på_knap.html">5. Klik På Knap</a></li>
-      <li><a href="Manipuler_indhold.html">6. Manipuler indehold</a>
-      <li><a href="style_elementer.html">7. Style Elementer</a></li>
-      <li><a href="Variabler.html">8. Variabler</a></li>
+      <li><a href="data_types.html">2. Data Types</a></li>
+      <li><a href="internal_JavaScript.html">3. Internal/External JavaScript</a></li>
+      <li><a href="Variabler.html">4. Variabler</a></li>
+      <li><a href="faa_fat_i_elementer.html">5. Få Fat I Elementer</a></li>
+      <li><a href="funktioner.html">6. Funktioner</a></li>
+      <li><a href="klik_på_knap.html">7. Klik På Knap</a></li>
+      <li><a href="style_elementer.html">8. Style Elementer</a></li>
       <li><a href="arrays.html" class="active">9. Arrays</a></li>
       <li><a href="if_statements.html">10. If Statements</a></li>
       <li><a href="for_loops.html">11. For Loops</a></li>
       <li><a href="while_loops.html">12. While Loops</a></li>
-      <li><a href="funktioner.html">13. Funktioner</a></li>
-      <li><a href="external_javascript.html">14. External Javascript</a></li>
     </ul>
   </nav>
 
   <section class="site_content">
     <main>
-
       <h2>Arrays</h2>
       <p><b>Arrays</b> er <b>objects</b>, der bruges til at gemme en samling. Denne samling kan være hvad som helst: <b>numbers</b>, <b>objects</b>, flere <b>arrays</b> osv. I JavaScript bruges arrays til at gemme flere værdier i en <b>variabel</b>, der er tilgængelig via et indeks (som starter fra 0). Værdierne der er gemt i arrayet kaldes <b>elements</b>.</p>
-      <p><b>let colors = ["red", "blue", "green"];</b></p>
-      </pre>
+      
+      <div class="prettyprint">
+        <textarea>
+          <script>
+
+            let farver = ["rød", "blå", "grøn"];
+            console.log(colors[0]); // 'rød'
+            console.log(colors[1]); // 'blå'
+            console.log(colors[2]); // 'grøn'
+
+          </script>
+        </textarea>
+        </div>
+
     </main>
   </section>
-
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="js/functions.js"></script>
 </body>
-
 </html>
